@@ -31,6 +31,14 @@ $routes->post('profiling/update', 'Profiling::update');
 $routes->delete('profiling/delete/(:num)', 'Profiling::delete/$1');
 $routes->post('profiling/fetchRecords', 'Profiling::fetchRecords');
 
+// Students routes
+
+$routes->get('/students', 'Students::index');
+$routes->post('students/save', 'Students::save');
+$routes->get('students/edit/(:segment)', 'Students::edit/$1');
+$routes->post('students/update', 'Students::update');
+$routes->delete('students/delete/(:num)', 'Students::delete/$1');
+$routes->post('students/fetchRecords', 'Students::fetchRecords');
 
 // Logs routes for admin
 $routes->get('/log', 'Logs::log');
